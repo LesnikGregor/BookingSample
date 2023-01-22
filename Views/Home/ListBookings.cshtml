@@ -1,0 +1,58 @@
+﻿@model List<Stranka>
+@{
+    ViewData["Title"] = "ListBookings";
+    
+}
+
+<h1>ListBookings</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                ImeInPriimek
+            </th>
+            <th>
+                DateTermina
+            </th>
+            <th>
+                TimeTermina
+            </th>
+            <th>
+                TipStoritve
+            </th>
+            <th>
+                TelSt
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImeInPriimek)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateTermina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeTermina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipStoritve)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelSt)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
